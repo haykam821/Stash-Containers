@@ -1,0 +1,6 @@
+{
+	"commands.stashcontainers.stashcontainer.connect.failure": "Could not connect a stash because the target block is not a container",
+	"commands.stashcontainers.stashcontainer.connect.success": "Connected the stash for UUID %s to that container",
+	"commands.stashcontainers.stashcontainer.disconnect.failure": "Could not disconnect the stash because the target block is not a container",
+	"commands.stashcontainers.stashcontainer.disconnect.success": "Disconnected the stash from that container"
+}

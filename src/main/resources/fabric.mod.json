@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "stashcontainers",
+	"version": "${version}",
+	"name": "Stash Containers",
+	"description": "Allows containers to redirect inserted contents to player stashes.",
+	"authors": [
+		"haykam821"
+	],
+	"contact": {
+		"homepage": "https://github.com/haykam821/Stash-Containers#readme",
+		"issues": "https://github.com/haykam821/Stash-Containers/issues"
+	},
+	"entrypoints": {
+        "main": [
+            "io.github.haykam821.stashcontainers.Main"
+        ],
+        "cardinal-components-block": [
+            "io.github.haykam821.stashcontainers.component.StashContainersComponentInitializer"
+        ]
+	},
+	"mixins": [
+		"stashcontainers.mixin.json"
+	],
+	"custom": {
+		"cardinal-components": [
+			"stashcontainers:stash_container_connection"
+		]
+	},
+	"license": "MIT",
+	"icon": "assets/stashcontainers/icon.png",
+	"depends": {
+		"fabricloader": ">=0.4.0",
+		"fabric-command-api-v1": "*",
+		"fabric-resource-loader-v0": "*",
+		"cardinal-components-block": ">=2.5.0",
+		"stash": "*"
+	}
+}
