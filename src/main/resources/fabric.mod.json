@@ -35,6 +35,7 @@
 		"fabric-resource-loader-v0": "*",
 		"cardinal-components-block": ">=2.7.0",
 		"server_translations_api": "*",
+		"fabric-permissions-api-v0": "*",
 		"stash": "*"
 	}
 }
