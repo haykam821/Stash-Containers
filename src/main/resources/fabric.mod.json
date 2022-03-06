@@ -33,7 +33,7 @@
 		"fabricloader": ">=0.4.0",
 		"fabric-command-api-v1": "*",
 		"fabric-resource-loader-v0": "*",
-		"cardinal-components-block": ">=2.5.0",
+		"cardinal-components-block": ">=2.7.0",
 		"stash": "*"
 	}
 }

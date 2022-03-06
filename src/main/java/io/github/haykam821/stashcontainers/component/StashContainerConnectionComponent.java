@@ -2,16 +2,16 @@ package io.github.haykam821.stashcontainers.component;
 
 import java.util.UUID;
 
-import dev.onyxstudios.cca.api.v3.block.BlockComponent;
+import dev.onyxstudios.cca.api.v3.component.Component;
 import io.github.haykam821.stash.component.StashComponent;
 import io.github.haykam821.stash.component.StashComponentInitializer;
 import net.minecraft.block.entity.LootableContainerBlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.PlayerManager;
 
-public class StashContainerConnectionComponent implements BlockComponent {
+public class StashContainerConnectionComponent implements Component {
 	private final LootableContainerBlockEntity blockEntity;
 	private UUID playerUuid;
 
@@ -45,14 +45,14 @@ public class StashContainerConnectionComponent implements BlockComponent {
 	}
 
 	@Override
-	public void readFromNbt(CompoundTag tag) {
-		this.playerUuid = tag.getUuid("PlayerUUID");
+	public void readFromNbt(NbtCompound nbt) {
+		this.playerUuid = nbt.getUuid("PlayerUUID");
 	}
 
 	@Override
-	public void writeToNbt(CompoundTag tag) {
+	public void writeToNbt(NbtCompound nbt) {
 		if (this.playerUuid != null) {
-			tag.putUuid("PlayerUUID", this.playerUuid);
+			nbt.putUuid("PlayerUUID", this.playerUuid);
 		}
 	}
 }
